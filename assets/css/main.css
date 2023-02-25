@@ -4124,3 +4124,14 @@ input, select, textarea {
 		align-items: center;
 		flex-direction: column;
 	  }
+
+	  .textabout
+	  {
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 90%;
+		max-width: 700px;
+	  }
