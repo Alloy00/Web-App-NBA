@@ -5,11 +5,40 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="apple-touch-icon" href="/images/icons/180.png">
+		<meta name="theme-color" content="#ff0000"/>
 		<link rel="shortcut icon" href="images/nba-logo.ico" >
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+  <link rel="manifest" href="/manifest.json">
+
+  <style>
+    #snackbar {
+      visibility: hidden;
+      min-width: 250px;
+      margin-left: -125px;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      border-radius: 2px;
+      padding: 16px;
+      position: fixed;
+      z-index: 1;
+      left: 50%;
+      bottom: 30px;
+    }
+
+    #snackbar.show {
+      visibility: visible;
+      -webkit-animation: fadein 0.5s;
+      animation: fadein 0.5s;
+    }
+  </style>
+  
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
+
 
 			<!-- Header -->
 				<header id="header">
@@ -126,6 +155,16 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="/service-worker.js"></script>
 
+			<script>
+				if ('serviceWorker' in navigator) {
+				  navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+					console.log('Service Worker registrado com sucesso:', registration.scope);
+				  }).catch(function(error) {
+					console.log('Falha ao registrar o Service Worker:', error);
+				  });
+				}
+			  </script>
 	</body>
 </html>
