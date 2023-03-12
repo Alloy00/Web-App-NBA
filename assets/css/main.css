@@ -4125,6 +4125,24 @@ input, select, textarea {
 		flex-direction: column;
 	  }
 
+	  .signup2 {
+		background-color: rgba(39, 40, 51, 0.965);;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+		padding: 30px;
+		width: 90%;
+		max-width: 400px;
+		margin: 0 auto;
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		font-weight: bold;
+		color: #ccc;
+	  }
+
 	  .textabout
 	  {
 		margin: 0 auto;
